@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Arts</title>
+    <script src="https://use.typekit.net/may2lve.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel = "stylesheet" type ="text/css" href = "style.css" />
+</head>
+<body>
+<div id = "navBar">
+    <a href="home.html"><h2 id = "title">Project Arts</h2></a>
+    <a href="browse.html"><h4 class = "navText" id = "login">Login or Sign Up</h4></a>
+    <a href="browse.html"><h4 class = "navText" id = "browse">Browse</h4></a>
+    <form  class="navText">
+        <input id = "search" type = "text" placeholder="Search...">
+    </form>
+</div>
+<div id = "selector-box">
+    <form>
+        <input id = "b-search" type = "text" placeholder="Search by name, keyword, or role...">
+        <button id = "b-button">Search</button>
+    </form>
+    <div id = "b-selectors">
+        <div id = "b-role" class = "b-selector">
+            <p>Role</p>
+            <img class = "arrow" src="images/down.svg">
+            <div id = "role-list" class = "b-dropdown"></div>
+        </div>
+        <div id = "b-major" class = "b-selector">
+            <p>Major</p>
+            <img class = "arrow" src="images/down.svg">
+            <div id = "major-list" class = "b-dropdown"></div>
+        </div>
+        <div id = "b-year" class = "b-selector">
+            <p>Year</p>
+            <img class = "arrow" src="images/down.svg">
+            <div id = "year-list" class = "b-dropdown"></div>
+        </div>
+        <div id = "b-skill" class = "b-selector">
+            <p>Skill</p>
+            <img class = "arrow" src="images/down.svg">
+        </div>
+        <form id = "b-current" class = "b-selector">
+            <input type="checkbox">
+            <label>Current Students Only</label>
+        </form>
+        <form id = "b-groups" class = "b-selector">
+            <input type="checkbox">
+            <label>Individuals Only</label>
+        </form>
+    </div>
+</div>
+</body>
+</html>
