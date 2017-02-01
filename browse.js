@@ -29,8 +29,26 @@ for (var j = 0; j < selector.length-2; j++) {
     selector[j].onmouseout = function () {
         var dropdown = this.querySelectorAll(".browse-dropdown");
         dropdown[0].style.display = "none";
+        var dropdown2 = this.querySelectorAll(".browse-dropdown2");
+        dropdown2[0].style.display = "none";
     };
 }
+//show dropdown menu layer two
+var dropdown2 = function(){
+    for (var m = 0; m < more.length; m++) {
+        more[m].onmouseover = function () {
+            var dropdown = this.querySelectorAll(".browse-dropdown2");
+            dropdown[0].style.display = "block";
+        };
+        more[m].onmouseout = function () {
+            console.log("hi");
+            var dropdown = this.querySelectorAll(".browse-dropdown2");
+                dropdown[0].style.display = "none";
+        };
+    }
+};
+dropdown2();
+
 //remove selected terms by clicking x
 var removeSelection = function(){
     selectedX = document.querySelectorAll(".selected-x");

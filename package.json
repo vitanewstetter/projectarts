@@ -1,0 +1,24 @@
+{
+  "name": "project_arts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitanewstetter/projectarts.git"
+  },
+  "author": "vita newstetter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitanewstetter/projectarts/issues"
+  },
+  "homepage": "https://github.com/vitanewstetter/projectarts#readme"
+}

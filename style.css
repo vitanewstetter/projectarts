@@ -172,13 +172,26 @@ a{
     font-size: 12px;
     position: absolute;
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: 8px 0px;
+    display: none;
+}
+.browse-dropdown2{
+    background-color: white;
+    border: 1px solid #E3DEDE;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(100%, 0px);
+    border-radius: 4px;
+    padding: 8px 0px 8px 16px;
+    width: 100%;
     display: none;
 }
 .dropdown-item{
-    padding-top: 4px;
+    padding: 4px 16px 4px ;
 }
-.dropdown-more p{
+.more p{
     display: inline-block;
     vertical-align: middle;
 }
