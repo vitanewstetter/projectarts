@@ -1,8 +1,11 @@
+var userData;
+
 var express = require("express"),
     // fs = require("fs"),
     // path = require("path"),
     passport = require("passport"),
-    facebook = require("passport-facebook").Strategy;
+    facebook = require("passport-facebook").Strategy,
+    bodyParser = require("body-parser");
     // google = require("passport-google-oauth").Strategy;
     //MongoClient = require("mongodb").MongoClient,
     //cors = require("cors"),
@@ -11,7 +14,8 @@ var express = require("express"),
 passport.use(new facebook({
         clientID: '239772336432810',
         clientSecret: 'b9c2fac8c81daeec2356ba92d5f7b88a',
-        callbackURL: 'http://localhost:3000/login/facebook/return'
+        callbackURL: 'http://localhost:3000/login/facebook/return',
+        profileFields: ['id', 'displayName', 'photos', 'email']
     },
     function(accessToken, refreshToken, profile, cb) {
         // In this example, the user's Facebook profile is supplied as the user
@@ -48,8 +52,13 @@ app.use(express.static('public'));
 //middleware
     app.use(require('morgan')('combined'));
     app.use(require('cookie-parser')());
-    app.use(require('body-parser').urlencoded({ extended: true }));
     app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
+
+// create application/json parser
+var jsonParser = bodyParser.json()
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // Initialize Passport and restore authentication state, if any, from the
 // session.
@@ -61,7 +70,8 @@ app.get("/", function(req, res){
     //db.collection('cards').remove({});
     console.log(req.method);
     console.log("index");
-    console.log(req.user);
+    userData = req.user;
+    console.log(userData);
         res.render('index', { user: req.user });
 });
 //load browse page
@@ -84,7 +94,6 @@ app.get('/login',
     function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/');
-        console.log(res);
     });
 
 app.get('/login/facebook',
