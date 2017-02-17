@@ -258,3 +258,10 @@ a{
     height: 100%;
     object-fit: cover;
 }
+#sign-up input[type=text], textarea{
+    outline: none;
+    border: 1px solid #E3DEDE;
+    background-color: #F5F7F7;
+    border-radius: 4px;
+    padding: 8px;
+}
