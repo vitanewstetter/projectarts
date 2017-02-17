@@ -237,3 +237,24 @@ a{
     font-size: 12px;
     margin-top: -8px;
 }
+
+#su-form{
+    width: 80%;
+    height: 300px;
+    max-width: 1200px;
+    background-color: white;
+    border: 1px solid #E3DEDE;
+    border-radius: 4px;
+    margin-left: 50%;
+    transform: translate(-50%, 0px);
+    padding: 24px;
+}
+#su-profpic{
+    width: 200px;
+    height:200px;
+}
+#su-profpic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
